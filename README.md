@@ -65,3 +65,5 @@ Putting your compendium on dropbox or google drive is another way to make the co
 [Gentleman, R. and Temple Lang, D. "Statistical Analyses and Reproducible Research" (May 2004). Bioconductor Project Working Papers.](http://biostats.bepress.com/bioconductor/paper2/)
 
 Stodden, V and Miguez, S 2014. Best Practices for Computational Science: Software Infrastructure and Environments for Reproducible and Extensible Research. Journal of Open Research Software 2(1):e21, DOI: [http://dx.doi.org/10.5334/jors.ay](http://dx.doi.org/10.5334/jors.ay)
+
+[Wickham, Hadley, R Packages: Organise, test, document, and share your code. O’Reilly.](http://r-pkgs.had.co.nz/)
