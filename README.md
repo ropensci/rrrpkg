@@ -67,3 +67,7 @@ Putting your compendium on dropbox or google drive is another way to make the co
 Stodden, V and Miguez, S 2014. Best Practices for Computational Science: Software Infrastructure and Environments for Reproducible and Extensible Research. Journal of Open Research Software 2(1):e21, DOI: [http://dx.doi.org/10.5334/jors.ay](http://dx.doi.org/10.5334/jors.ay)
 
 [Wickham, Hadley, R Packages: Organise, test, document, and share your code. O’Reilly.](http://r-pkgs.had.co.nz/)
+
+### Colophon
+
+This document was the result of discussions at the [2015 rOpenSci unconference](http://unconf.ropensci.org/) (cf. https://github.com/ropensci/unconf/issues/11 and https://github.com/ropensci/unconf/issues/31). Contributors to the discussion include... [fill this in from the issue tracker and memory of who was there]. This document was initially drafted by [Hadley Wickham](https://github.com/hadley), with later contributions from [Ben Marwick](https://github.com/benmarwick). Additional contributions are welcome!
