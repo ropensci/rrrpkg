@@ -7,7 +7,7 @@ Use of an R package to facilitate reproducible research
 
 The goal of a research compendium is to provide a standard and easily recognisable way for organising an reproducible research project with R. A research compendium is ideal for projects that result in the publication of a paper because then readers of the paper can access the code and data that generated the results in the paper. A research compendium is a convention for how you organise your research artefacts into directories. The guiding principle in creating a research compendium is to organise your files following conventions that many people use. Following these conventions with help other people instantly familiarise themselves with the structure of your project, and also supports tool building which takes advantage of the shared structure.
 
-Some of the earliest examples of this approach can be found in Robert Gentleman and Duncan Temple Lang's 2004 paper "Statistical Analyses and Reproducible Research" [Bioconductor Project Working Papers](http://biostats.bepress.com/bioconductor/paper2/) and Gentleman's 2005 article ["Reproducible Research: A Bioinformatics Case Study"](http://dx.doi.org/10.2202/1544-6115.1034) in _Statistical Applications in Genetics and Molecular Biology_. Since then there have been a substantial increase in the use of R as a research tool, and numerous improvements in the ease of making R packages. This means that making a research compendium based on an R package is a practical solution to the challenges of organising and communicating research results for many scientists. 
+Some of the earliest examples of this approach can be found in Robert Gentleman and Duncan Temple Lang's 2004 paper "Statistical Analyses and Reproducible Research" [Bioconductor Project Working Papers](http://biostats.bepress.com/bioconductor/paper2/) and Gentleman's 2005 article ["Reproducible Research: A Bioinformatics Case Study"](http://dx.doi.org/10.2202/1544-6115.1034) in _Statistical Applications in Genetics and Molecular Biology_. Since then there has been a substantial increase in the use of R as a research tool in many fields, and numerous improvements in the ease of making R packages. This means that making a research compendium based on an R package is a now practical solution to the challenges of organising and communicating research results for many scientists. 
 
 ### Why create a research compendium?
 
@@ -55,6 +55,28 @@ project
 
 A real-world example of this simple research compendium format is online here: https://github.com/cboettig/BroodParasiteDescription
 
+* An intermediate example might look like this:
+
+```
+project
+|- DESCRIPTION          # project metadata and dependencies 
+|- README.md            # top-level description of content and guide to users
+|- NAMESPACE            # exports R functions in the package for repeated use
+|- LICENSE              # specify the conditions of use and reuse of the code, data & text
+|
+|- data/                # raw data, not changed once created
+|  +- my_data.csv       # data files in open formats such as TXT, CSV, TSV, etc.
+|
+|- analysis             # any programmatic code 
+|  +- my_report.Rmd     # R markdown file with R code and narrative text interwoven
+|
+|- R                    #  
+|  +- my_functions.R    # custom R functions that are used more than once in the project
+|
+|- man
+|  +- my_functions.Rd   # documentation for the R functions (auto-generated when using devtools)
+```
+
 * As your project becomes more complex, it's ok to add logically-named subdirectories to keep files organised. There are very few strict rules here, the key principle is to keep your compendium logically organised so that another person can easily understand how your files relate to each other without having to ask you. 
 
 * Naming objects is notoriously difficult to do well, so it's worth to put some effort into a logical and systematic file naming convention if you have a complex project with many files and directories (for example, a multi-experiment study where each experiment has numerous data and code files). 
@@ -73,11 +95,13 @@ project
 |- data/                # raw data, not changed once created
 |  +- my_data.csv       # data files in open formats such as TXT, CSV, TSV, etc.
 |
-|- analysis             # any programmatic code 
-|  +- my_report.Rmd     # R markdown file with R code and narrative text interwoven
+|- analysis             # any programmatic code
+|  +- my_report.Rmd     # R markdown file with narrative text interwoven with code chunks 
+|  +- makefile          # builds a PDF/HTML/DOCX file from the Rmd, code, and data files
+|  +- scripts/          # code files (R, shell, etc.) used for data cleaning, analysis and visualisation 
 |
 |- R                    #  
-|  +- my_functions.R    # custom R functions that are used more than once in the project
+|  +- my_functions.R    # custom R functions that are used more than once throughout the project
 |
 |- man
 |  +- my_functions.Rd   # documentation for the R functions (auto-generated when using devtools)
@@ -95,7 +119,7 @@ Note that although these real-world examples have a common basic R package struc
 
 ### Useful tools and templates for making research compendia  
 
-- Probably the most useful set of tools for making research compendia as R packages is the `devtools`package combined with the [RStudio](http://www.rstudio.com/) integrated development environment, and a copy of Hadley Wickham's book [R Packages](http://r-pkgs.had.co.nz/)
+- Probably the most useful set of tools for making research compendia as R packages is the `devtools` package combined with the [RStudio](http://www.rstudio.com/) integrated development environment, and a copy of Hadley Wickham's book [R Packages](http://r-pkgs.had.co.nz/)
 
 - Several people have developed templates for using R packages as research compendia. These templates are mostly for their personal use, and are works-in-progress, but are freely available for others to adapt and learn from:  
 
@@ -135,4 +159,4 @@ Stodden, V and Miguez, S 2014. Best Practices for Computational Science: Softwar
 
 ### Colophon
 
-This document was the result of discussions at the [2015 rOpenSci unconference](http://unconf.ropensci.org/) (cf. https://github.com/ropensci/unconf/issues/11 and https://github.com/ropensci/unconf/issues/31). Contributors to the discussion include... [if you were in the rOpenSci unconf breakout on this topic please add your name via a Pull Request]. This document was initially drafted by [Hadley Wickham](https://github.com/hadley), with later contributions from [Ben Marwick](https://github.com/benmarwick). Additional contributions are welcome! Please [post an issue](https://github.com/ropensci/rrrpkg/issues/) to ask questions and discuss suggestions
+This document was the result of discussions at the [2015 rOpenSci unconference](http://unconf.ropensci.org/) (cf. https://github.com/ropensci/unconf/issues/11 and https://github.com/ropensci/unconf/issues/31). Contributors to the discussion include... [if you were in the rOpenSci unconf breakout on this topic please add your name via a Pull Request]. This document was initially drafted by [Hadley Wickham](https://github.com/hadley), with later contributions from [Ben Marwick](https://github.com/benmarwick). Additional contributions are welcome! Please [post an issue](https://github.com/ropensci/rrrpkg/issues/) to ask questions and discuss suggestions.
