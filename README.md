@@ -49,7 +49,7 @@ project
 |- data/                # raw data, not changed once created
 |  +- my_data.csv       # data files in open formats such as TXT, CSV, TSV, etc.
 |
-|- analysis             # any programmatic code 
+|- analysis/            # any programmatic code 
 |  +- my_scripts.R      # R code used to analyse and visualise data 
 ```
 
@@ -67,13 +67,13 @@ project
 |- data/                # raw data, not changed once created
 |  +- my_data.csv       # data files in open formats such as TXT, CSV, TSV, etc.
 |
-|- analysis             # any programmatic code 
+|- analysis/            # any programmatic code 
 |  +- my_report.Rmd     # R markdown file with R code and narrative text interwoven
 |
-|- R                    #  
+|- R/                   #  
 |  +- my_functions.R    # custom R functions that are used more than once in the project
 |
-|- man
+|- man/
 |  +- my_functions.Rd   # documentation for the R functions (auto-generated when using devtools)
 ```
 This intermediate example includes the `R/` and `man/` directories. These contain custom functions that are used repeatedly throughout the project. The `man/` directory contains the manual, or documentation on the use of the functions. The NAMESPACE and LICENSE files are also typical features of R packages. 
@@ -96,18 +96,18 @@ project
 |- data/                # raw data, not changed once created
 |  +- my_data.csv       # data files in open formats such as TXT, CSV, TSV, etc.
 |
-|- analysis             # any programmatic code
+|- analysis/            # any programmatic code
 |  +- my_report.Rmd     # R markdown file with narrative text interwoven with code chunks 
 |  +- makefile          # builds a PDF/HTML/DOCX file from the Rmd, code, and data files
 |  +- scripts/          # code files (R, shell, etc.) used for data cleaning, analysis and visualisation 
 |
-|- R                    #  
+|- R/                     
 |  +- my_functions.R    # custom R functions that are used more than once throughout the project
 |
-|- man
+|- man/
 |  +- my_functions.Rd   # documentation for the R functions (auto-generated when using devtools)
 |
-|- tests
+|- tests/
 |  +- testthat.R        # unit tests of R functions to ensure they perform as expected
 ```
 
@@ -123,10 +123,9 @@ Note that although these real-world examples have a common basic R package struc
 - Probably the most useful set of tools for making research compendia as R packages is the `devtools` package combined with the [RStudio](http://www.rstudio.com/) integrated development environment, and a copy of Hadley Wickham's book [R Packages](http://r-pkgs.had.co.nz/)
 
 - Several people have developed templates for using R packages as research compendia. These templates are mostly for their personal use, and are works-in-progress, but are freely available for others to adapt and learn from:  
-
-+ [Jeff Hollister's manuscriptPackage](https://github.com/jhollist/manuscriptPackage)  
-+ [Carl Boettiger's template](https://github.com/cboettig/template)  
-+ [Francisco Rodriguez-Sanchez's template](https://github.com/Pakillo/template). 
+    + [Jeff Hollister's manuscriptPackage](https://github.com/jhollist/manuscriptPackage)  
+    + [Carl Boettiger's template](https://github.com/cboettig/template)  
+    + [Francisco Rodriguez-Sanchez's template](https://github.com/Pakillo/template). 
 
 These templates are empty packages that show various ways of organising an analysis as an R package (eg. where the manuscript is the package vignette, or similarly bundled with the package) 
 
