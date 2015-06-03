@@ -76,6 +76,7 @@ project
 |- man
 |  +- my_functions.Rd   # documentation for the R functions (auto-generated when using devtools)
 ```
+This intermediate example includes the `R/` and `man/` directories. These contain custom functions that are used repeatedly throughout the project. The `man/` directory contains the manual, or documentation on the use of the functions. The NAMESPACE and LICENSE files are also typical features of R packages. 
 
 * As your project becomes more complex, it's ok to add logically-named subdirectories to keep files organised. There are very few strict rules here, the key principle is to keep your compendium logically organised so that another person can easily understand how your files relate to each other without having to ask you. 
 
@@ -123,9 +124,9 @@ Note that although these real-world examples have a common basic R package struc
 
 - Several people have developed templates for using R packages as research compendia. These templates are mostly for their personal use, and are works-in-progress, but are freely available for others to adapt and learn from:  
 
--- [Jeff Hollister's manuscriptPackage](https://github.com/jhollist/manuscriptPackage)  
--- [Carl Boettiger's template](https://github.com/cboettig/template)  
--- [Francisco Rodriguez-Sanchez's template](https://github.com/Pakillo/template). 
++ [Jeff Hollister's manuscriptPackage](https://github.com/jhollist/manuscriptPackage)  
++ [Carl Boettiger's template](https://github.com/cboettig/template)  
++ [Francisco Rodriguez-Sanchez's template](https://github.com/Pakillo/template). 
 
 These templates are empty packages that show various ways of organising an analysis as an R package (eg. where the manuscript is the package vignette, or similarly bundled with the package) 
 
