@@ -19,7 +19,7 @@ Using research compendia simplifies file management and streamlines analytical w
 * Script files with reusable **functions** go in the `R/` directory. This is often a small part of an analysis but it’s important.
 * Raw **data** files live in the `data/` directory. If your data are very large, it may be worthwhile to include small sample dataset that so that people can try out the techniques without having to run very expensive computations
 * Analysis **scripts and reports** files go in the `analysis/` directory. The `analysis/` directory should include either a makefile or a makefile.R that controls the order of the code. In many cases it will be useful to give the analysis scripts ascending names, e.g. 001-load.R, 002-clean.R etc (but this only gives a linear ordering, it doesn't capture the full tree of dependencies)
-* An optional DESCRIPTION file describes the software dependencies of the compendia.
+* A **DESCRIPTION** file that gives structured, machine- and human-readable information about the authors, licensing, the software dependencies and other metadata of the compendium. When a DESCRIPTION file is included along with the other items above, then the compendium is also a formal R package and you can take advantage of many time-saving tools for package development, testing and sharing (for example, the `devtools` package).
 
 If you’re familiar with R packages, you’ll notice many similarities with these conventions. But there are some differences:
 
