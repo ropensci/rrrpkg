@@ -53,7 +53,7 @@ project
 |  +- my_scripts.R      # R code used to analyse and visualise data 
 ```
 
-A real-world example of this simple research compendium format is online here: https://github.com/cboettig/BroodParasiteDescription
+A real-world example of this simple research compendium format is online here: https://github.com/duffymeg/BroodParasiteDescription
 
 * An intermediate example might look like this:
 
