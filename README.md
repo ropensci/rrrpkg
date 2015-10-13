@@ -78,6 +78,8 @@ project
 ```
 This intermediate example includes the `R/` and `man/` directories. These contain custom functions that are used repeatedly throughout the project. The `man/` directory contains the manual, or documentation on the use of the functions. The NAMESPACE and LICENSE files are also typical features of R packages. 
 
+For example, https://github.com/USEPA/LakeTrophicModelling has much of the repeatable code in `R/` and  the remainder of the code and text in `vignettes/manuscript.Rmd`.
+
 * As your project becomes more complex, it's ok to add logically-named subdirectories to keep files organised. There are very few strict rules here, the key principle is to keep your compendium logically organised so that another person can easily understand how your files relate to each other without having to ask you. 
 
 * Naming objects is notoriously difficult to do well, so it's worth to put some effort into a logical and systematic file naming convention if you have a complex project with many files and directories (for example, a multi-experiment study where each experiment has numerous data and code files). 
