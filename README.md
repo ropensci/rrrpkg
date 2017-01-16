@@ -127,7 +127,8 @@ Note that although these real-world examples have a common basic R package struc
 - Several people have developed templates for using R packages as research compendia. These templates are mostly for their personal use, and are works-in-progress, but are freely available for others to adapt and learn from:  
     + [Jeff Hollister's manuscriptPackage](https://github.com/jhollist/manuscriptPackage)  
     + [Carl Boettiger's template](https://github.com/cboettig/template)  
-    + [Francisco Rodriguez-Sanchez's template](https://github.com/Pakillo/template). 
+    + [Francisco Rodriguez-Sanchez's template](https://github.com/Pakillo/template)
+    + [Ben Marwick's researchcompendium](https://github.com/benmarwick/researchcompendium)
 
 These templates are empty packages that show various ways of organising an analysis as an R package (eg. where the manuscript is the package vignette, or similarly bundled with the package) 
 
